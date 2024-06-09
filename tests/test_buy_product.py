@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 from pages.advanced_filter_page import Advances_filter_page
+from pages.cart_page import Cart_page
 from pages.main_page import Main_page
 
 options = webdriver.ChromeOptions()
@@ -22,6 +23,9 @@ def test_buy_product_1():
 
     afp = Advances_filter_page(driver)
     afp.add_product_to_cart()
+
+    cp = Cart_page(driver)
+    cp.actions_with_the_product()
 
     print("Finish Test")
     #driver.quit()
