@@ -9,6 +9,6 @@ class Base:
         print("Current url " + get_url)
 
     def assert_word(self, word, result):
-        value_word = word.text
+        value_word = word
         assert value_word == result
         print("Good value word")
